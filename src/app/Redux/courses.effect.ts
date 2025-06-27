@@ -3,12 +3,12 @@ import * as CoursesActions from './courses.actions';
 import { catchError, exhaustMap, map, mergeMap, of, tap } from 'rxjs';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { Course } from '../libs/types';
+import { inject, Injectable } from '@angular/core';
 
+@Injectable()
 export class CoursesEffects {
-  constructor(
-    private actions$: Actions,
-    private coursesService: CoursesService
-  ) {}
+  actions$ = inject(Actions);
+  coursesService = inject(CoursesService);
 
   getAllCourses$ = createEffect(() =>
     this.actions$.pipe(

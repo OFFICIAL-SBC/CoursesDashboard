@@ -3,8 +3,10 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
 import { routes } from './app.routes';
-import { provideStore } from '@ngrx/store';
+import { provideState, provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
+import { coursesFeatureKey, coursesReducer } from './Redux/courses.reducer';
+import { CoursesEffects } from './Redux/courses.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,6 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideStore(),
-    provideEffects()
-],
+    provideState(coursesFeatureKey, coursesReducer),
+    provideEffects(CoursesEffects),
+  ],
 };
