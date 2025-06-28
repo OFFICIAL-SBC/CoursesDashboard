@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Primary Colors */
+  --primary-color: #0055d2;
+  --primary-color-light: #3377dd;
+  --primary-color-dark: #003ca1;
+
+  /* Secondary Colors */
+  --secondary-color: #6c757d;
+  --secondary-color-light: #a0a5aa;
+  --secondary-color-dark: #494f54;
+
+  /* Accent / Info / Feedback */
+  --accent-color: #00c2ff;
+  --info-color: #17a2b8;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+
+  /* Background and Surfaces */
+  --background-color: #f4f6f8;
+  --surface-color: #ffffff;
+  --surface-alt-color: #e9ecef;
+
+  /* Text Colors */
+  --text-color: #212529;
+  --text-light-color: #6c757d;
+  --text-on-primary: #ffffff;
+  --text-on-secondary: #ffffff;
+
+  /* Borders and Dividers */
+  --border-color: #dee2e6;
+  --divider-color: #ced4da;
+
+  /* Shadows */
+  --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 3px 6px rgba(0, 0, 0, 0.15);
+  --box-shadow-heavy: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+  /* ─────🖋️ TYPOGRAPHY───── */
+  --font-family-base: "Inter", sans-serif;
+
+  /* ─────🔠 FONT SIZES───── */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px (base) */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-xxl: 2rem; /* 32px */
+  --font-size-display: 3rem; /* 48px */
+
+  /* ─────🔤 FONT WEIGHTS───── */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}

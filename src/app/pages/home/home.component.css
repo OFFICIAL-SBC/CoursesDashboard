@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  font-family: var(--font-family-base);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+.hero {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  padding: 4rem 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: var(--font-size-display);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: var(--font-size-lg);
+  margin-bottom: 2rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow-medium);
+  background-color: var(--secondary-color);
+  color: var(--text-on-secondary);
+  transition: background-color 0.3s;
+}
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--text-on-primary);
+}
+.btn-primary:hover {
+  background-color: var(--primary-color-light);
+}
+.features {
+  padding: 4rem 0;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.feature {
+  background-color: var(--surface-color);
+  padding: 2rem;
+  border: 1px solid var(--divider-color);
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: var(--box-shadow-light);
+}
+.feature h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 1rem;
+}
+.feature p {
+  font-size: var(--font-size-md);
+  color: var(--text-light-color);
+}
