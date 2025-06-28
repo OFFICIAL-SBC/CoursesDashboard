@@ -8,7 +8,7 @@ import { catchError, Observable } from 'rxjs';
 })
 export class CoursesService {
   http = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:8084/course';
+  private readonly apiUrl = 'api/course';
 
   getAllCourses(): Observable<Course[]> {
     return this.http.get<Course[]>(this.apiUrl);
