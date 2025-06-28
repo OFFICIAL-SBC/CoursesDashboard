@@ -2,5 +2,7 @@
   padding: 2rem;
   margin: 1rem auto;
   max-width: 1300px;
+  min-height: 100%;
   background-color: var(--background-color);
+  z-index: 1;
 }

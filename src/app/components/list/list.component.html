@@ -1,0 +1,24 @@
+<ul class="courses-list">
+  <li class="list-header badge">
+    <span>Name</span>
+    <span>Description</span>
+    <span>Level</span>
+    <span>Duration</span>
+    <span>Price</span>
+  </li>
+  @for (item of coursesList(); track $index) {
+  <li class="list-item">
+    <span>{{ item.name }}</span>
+    <span>{{ item.description }}</span>
+    <span>{{ item.level }}</span>
+    <span>{{ item.duration }}</span>
+    <span>{{ item.price }}</span>
+    <span
+      [class.show]="page() === 'dashboard'"
+      [class.hidden]="page() !== 'dashboard'"
+      (click)="item.id !== undefined && deleteCourse(item.id)"
+      >🗑️</span
+    >
+  </li>
+  }
+</ul>

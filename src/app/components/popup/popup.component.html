@@ -1,0 +1,10 @@
+<div class="popup-container">
+  <div
+    class="popup"
+    [class.success]="type() === 'success'"
+    [class.error]="type() === 'error'"
+  >
+    <span>{{ message() }}</span>
+    <button class="close" aria-label="close" (click)="close.emit()">×</button>
+  </div>
+</div>

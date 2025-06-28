@@ -1,0 +1,52 @@
+.popup-container {
+  position: fixed; /* fixed = pinned to viewport, never scrolled away   */
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0;   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  pointer-events: none; /*  keep overlay “transparent”…                    */
+}
+
+.popup,
+.close {
+  pointer-events: auto;
+}
+
+.popup {
+  min-width: 260px;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
+  color: var(--text-on-primary);
+  display: flex;
+  justify-content: space-between;
+  animation: fade-in 0.25s ease-out;
+  z-index: 1001;
+}
+.popup.success {
+  background: var(--success-color);
+}
+.popup.error {
+  background: var(--danger-color);
+}
+.close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 1001; /* Ensure close button is above the popup */
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

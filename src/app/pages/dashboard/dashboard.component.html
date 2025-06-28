@@ -1,1 +1,47 @@
-<p>dashboard works!</p>
+<section>
+  <h2>These are the available courses</h2>
+  <app-input (searchTermOutout)="searchCourses($event)"></app-input>
+  <app-list
+    [coursesList]="searchedCourses"
+    page="dashboard"
+    (deleteCourseId)="deleteCourse($event)"
+  ></app-list>
+</section>
+
+<div class="add-course" (click)="openAddModal()">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="currentColor"
+      d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+    />
+  </svg>
+</div>
+
+<!-- Toast for SUCCESS -->
+<app-popup
+  *ngIf="success$ | async as msg"
+  type="success"
+  [message]="msg"
+  (close)="onPopupClosed()"
+></app-popup>
+
+<!-- Toast for ERROR -->
+<app-popup
+  *ngIf="error$ | async as msg"
+  type="error"
+  [message]="msg"
+  (close)="onPopupClosed()"
+></app-popup>
+
+<!-- Add modal Popup -->
+<app-course-modal
+  *ngIf="isAddModalOpen"
+  (closed)="closeAddModal()"
+  (add)="addCourse($event)"
+>
+</app-course-modal>

@@ -57,3 +57,5 @@ export const updateCourseFailed = createAction(
   '[courses] Update Course Failed',
   props<{ error: string }>()
 );
+
+export const clearStatus = createAction('[Courses] Clear status');

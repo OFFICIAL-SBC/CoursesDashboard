@@ -1,0 +1,21 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.input-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.input-container input::placeholder {
+  color: #999;
+}

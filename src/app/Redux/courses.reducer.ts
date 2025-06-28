@@ -53,5 +53,10 @@ export const coursesReducer = createReducer(
     ...state,
     loading: false,
     error,
+  })),
+  on(CoursesActions.clearStatus, (state) => ({
+    ...state,
+    success: null,
+    error: null,
   }))
 );

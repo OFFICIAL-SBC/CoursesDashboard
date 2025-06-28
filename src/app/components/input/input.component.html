@@ -1,0 +1,13 @@
+<div class="input-container">
+  <input
+    type="text"
+    placeholder="Search courses"
+    [value]="searchTerm()"
+    (change)="searchTerm.set(searchTermInputTag.value)"
+    (input)="searchTerm.set(searchTermInputTag.value)"
+    #searchTermInputTag
+  />
+
+  <!--   #searchTermInputTag is a template reference variable that allows us to access the input element directly in the component. -->
+  <!--   that means that we dont need to use $event.target.value to get the value of the input element. -->
+</div>

@@ -1,8 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CoursesService } from './services/courses.service';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { Store } from '@ngrx/store';
+import * as CoursesActions from './Redux/courses.actions';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +14,9 @@ import { LayoutComponent } from './components/layout/layout.component';
 export class AppComponent {
   title = 'CoursesDashboard';
 
-  service = inject(CoursesService);
+  private readonly store = inject(Store);
 
   ngOnInit() {
-    this.service.getAllCourses().subscribe({
-      next: (data) => console.log(data),
-      error: (error) => console.log(error),
-    });
+    this.store.dispatch(CoursesActions.getCourses());
   }
 }

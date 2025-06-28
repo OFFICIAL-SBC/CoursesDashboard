@@ -1,0 +1,68 @@
+/* dimmed backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1040;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* modal card */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.25);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+input,
+select,
+textarea {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+button {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="submit"] {
+  background: var(--success-color);
+  color: #fff;
+}
+button[disabled] {
+  opacity: 0.6;
+  cursor: default;
+}

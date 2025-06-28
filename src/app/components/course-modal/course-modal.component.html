@@ -1,0 +1,42 @@
+<div class="backdrop" (click)="cancel()"></div>
+
+<div class="modal">
+  <h3>New Course</h3>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Name *
+      <input formControlName="name" />
+    </label>
+
+    <label>
+      Description *
+      <textarea formControlName="description"></textarea>
+    </label>
+
+    <label>
+      Duration *
+      <input formControlName="duration" placeholder="e.g. 6h" />
+    </label>
+
+    <label>
+      Level *
+      <select formControlName="level">
+        <option value="">Select level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    </label>
+
+    <label>
+      Price (USD) *
+      <input type="number" formControlName="price" min="0" />
+    </label>
+
+    <div class="buttons">
+      <button type="button" (click)="cancel()">Cancel</button>
+      <button type="submit" [disabled]="form.invalid">Add</button>
+    </div>
+  </form>
+</div>
